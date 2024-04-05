@@ -7,24 +7,41 @@ Predicting the direction of S&P500 Stock price using Machine Learning S&P 500 (G
 
 This project aims at creating a machine learning model to predict the direction of the S&P500 index price based on historical data, ticker symbol: GSPC.
 
-Project Steps • Download data using the yfinance package in python • Explore, clean, and visualize the data using pandas • Create and train an initial machine learning model • Generate a back testing system to be more precise in the accuracy measurement • Improve the accuracy of the model
+Project Steps 
+• Download data using the yfinance package in python 
+• Explore, clean, and visualize the data using pandas 
+• Create and train an initial machine learning model 
+• Generate a back testing system to be more precise in the accuracy measurement 
+• Improve the accuracy of the model
 
-Tools: Python: • Pandas • YFinance • OS • Sklearn • RandomForestClassifier
+Tools: 
+Python: 
+• Pandas 
+• YFinance 
+• OS • Sklearn 
+• RandomForestClassifier
 
 Questions
 
-Given the fact that Machine Learning is designed and used for predicting market price fluctuations or price forecasting, among other things, can it be a reliable tool?
-Could we get an accurate prediction on the direction of the price solely on historical data?
-can a model be created to predict more accurate outcomes or results?
-would I use this model to trade in the S&P500?
+1. Given the fact that Machine Learning is designed and used for predicting market price fluctuations or price forecasting, among other things, can it be a reliable tool?
+2. Could we get an accurate prediction on the direction of the price solely on historical data?
+3. Can a model be created to predict more accurate outcomes or results?
+4. Would I use this model to trade in the S&P500?
 
 Hypothesis
 
-I would say that Machine Learning is a reliable tool.
-It would be kind of hard to get an accurate prediction solely on historical data, other factors would have to be considered.
-Technology is always improving; so, I would say yes.
-Yes, because Machine Learning algorithms are being used to generate pricing forecasts that are more reliable and more accurate.
-Downloading the data I downloaded the historical data of the S&P500 from yahoo finance by loading a package called yfinance into Jupiter notebook, this package calls the yahoo API to download daily stock and index prices. In this case I did not implement a ROCCC approach to determine the credibility of the data. Nonetheless, I’m providing yahoo finance S&P500 index historical data website as reference: S&P 500 (^GSPC) Historical Data - Yahoo Finance Using the history method in python, I decided to take a look at all the historical data starting 12-30-1927 where there was only a 90-stock index, up to March 14,2024 to find out if there is an overall upswing or downswing trend on the market. Cleaning and visualizing the data.
+1. I would say that Machine Learning is a reliable tool.
+2. It would be kind of hard to get an accurate prediction solely on historical data, other factors would have to be considered.
+3. Technology is always improving; so, I would say yes.
+4. Yes, because Machine Learning algorithms are being used to generate pricing forecasts that are more reliable and more accurate.
+
+Downloading the data
+
+I downloaded the historical data of the S&P500 from yahoo finance by loading a package called yfinance into Jupiter notebook, this package calls the yahoo API to download daily stock and index prices. Nonetheless, I’m providing yahoo finance S&P500 index historical data website as reference: S&P 500 (^GSPC) Historical Data - Yahoo Finance 
+
+In this case I did not implement a ROCCC approach to determine the credibility of the data. 
+
+Using the history method in python, I decided to take a look at all the historical data starting 12-30-1927 where there was only a 90-stock index, up to March 14,2024 to find out if there is an overall upswing or downswing trend on the market. Cleaning and visualizing the data.
 
 I then proceeded to visualize and clean the data using pandas; I first plotted the data in the data frame to have a better look at the trend, here we can see the trading dates on the x-axis, and the closing price on the y-axis; it is obvious that the overall trend of the index fund is in an upswing position since late 1980, which means that we would’ve been better off buying some stock in early 1990, or even in 2009 or 2010.
 
@@ -52,13 +69,22 @@ I also set the threshold to 0.6 instead of the default threshold of 0.5, this si
 
 Results
 
-1.Given the fact that Machine Learning is designed and used for predicting market price fluctuations or price forecasting, among other things, can it be a reliable tool for this case? While not infallible, Machine Learning provides important insights into future market or price movements. based on the ability for Machine Learning to provide a result solely on time series data and historical prices of the index, I would say that it can be used just to get a sense of the directionality of the market as in this model.
+1.Given the fact that Machine Learning is designed and used for predicting market price fluctuations or price forecasting, among other things, can it be a reliable tool for this case? 
 
-2.Could we get an accurate prediction on the direction of the price solely on historical data? It is hard to get an accurate prediction on the direction of the market, to be close to accurate a lot of factors such as technical, fundamental, and sentimental analysis along with macro factors such as federal fund rate, price indices, unemployment, real estate, inflation, etc. would have to be considered.
+While not infallible, Machine Learning provides important insights into future market or price movements. based on the ability for Machine Learning to provide a result solely on time series data and historical prices of the index, I would say that it can be used just to get a sense of the directionality of the market as in this model.
 
-3.can a model be created or improved to predict more accurate outcomes or results? Yes, the model can always be improved, one can build quite a bit on this model and get far by using different data such as hourly data, minute by minute data, macro-economic factors, technical and fundamental analysis, etc., the algorithm can also be improved by tweaking random forest parameters and the prediction threshold, more predictors can be added as well, and so on.
+2.Could we get an accurate prediction on the direction of the price solely on historical data? 
 
-would I use this model to trade in the S&P500? Absolutely not, even though the model predicted 57.3% of the days the market would go up, it reflects a good result considering I only worked with historical prices of the index and time series data; however, using this model for purposes of trading the market would not be recommended.
+It is hard to get an accurate prediction on the direction of the market, to be close to accurate a lot of factors such as technical, fundamental, and sentimental analysis along with macro factors such as federal fund rate, price indices, unemployment, real estate, inflation, etc. would have to be considered.
+
+3.Can a model be created or improved to predict more accurate outcomes or results? 
+
+Yes, the model can always be improved, one can build quite a bit on this model and get far by using different data such as hourly data, minute by minute data, macro-economic factors, technical and fundamental analysis, etc., the algorithm can also be improved by tweaking random forest parameters and the prediction threshold, more predictors can be added as well, and so on.
+
+4. Would I use this model to trade in the S&P500?
+
+Absolutely not, even though the model predicted 57.3% of the days the market would go up, it reflects a good result considering I only worked with historical prices of the index and time series data; however, using this model for purposes of trading the market would not be recommended.
+
 Conclusion
 
 Even though the results were not favorable, the model has some predictive value, the market went up 57.3% of the days, which is better than the baseline where it shows that the market went up about 53% of the days. Machine Learning can be reliable to some extent for market price directionality prediction, but it must be combined with domain expertise, data quality, multiple external factors, and potential limitations.
